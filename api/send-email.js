@@ -1,7 +1,11 @@
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 
-const allowedOrigins = ["https://www.yvagacore.tech"];
+const allowedOrigins = [
+  "https://www.yvagacore.tech",
+  "yvagacore.tech",
+  "https://landing-page-lime-zeta.vercel.app",
+];
 
 // Configuración de Nodemailer
 const transporter = nodemailer.createTransport({
