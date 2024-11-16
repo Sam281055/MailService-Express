@@ -4,7 +4,10 @@ const cors = require("cors");
 const express = require("express");
 const nodemailer = require("nodemailer");
 
-const allowedOrigins = ["https://yvagacore.tech"];
+const allowedOrigins = [
+  "https://www.yvagacore.tech",
+  "https://landing-page-git-develop-diegos-projects-5008dfc5.vercel.app/",
+];
 
 const app = express();
 app.use(express.json());
