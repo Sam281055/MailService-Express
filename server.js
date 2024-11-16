@@ -1,13 +1,13 @@
 require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
-
+const cors = require('cors');
 const app = express();
 app.use(express.json());
-
+// app.use(cors)
 // Configuración de Nodemailer
 const transporter = nodemailer.createTransport({
-  service: 'zoho',
+  service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -21,7 +21,7 @@ app.post('/send-email', async (req, res) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_TO,
-    subject: 'Nuevo Mensaje desde el Formulario de Contacto',
+    subject: 'Formulario LandingPage',
     text: `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}`,
   };
 
